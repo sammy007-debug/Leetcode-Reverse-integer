@@ -25,9 +25,9 @@ def reverseInteger(x):
     while x != 0:
         remainder = mod(x, 10)
         x = divide(x, 10)
-        if result > divide(MAXInt, 10) or (result == divide(MAXInt, 10) and result > 7):
+        if result > divide(MAXInt, 10) or (result == divide(MAXInt, 10) and remainder > 7):
             return 0
-        elif result < divide(MINInt, 10) or (result == divide(MINInt, 10) and result < -8):
+        elif result < divide(MINInt, 10) or (result == divide(MINInt, 10) and remainder < -8):
             return 0
         result = result * 10 + remainder
 
